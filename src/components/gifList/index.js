@@ -1,7 +1,12 @@
+import Gif from '../gif';
+
 const GifList = (props) => {
-  const src = `https://media2.giphy.com/media/${props.id}`
+
   return (
-   <img src={src} alt="It's a gif, bro" className="gif"/>
+    <div className='gif-list'>
+      {props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />)}
+    </div>
+
   );
 }
 
