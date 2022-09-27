@@ -3,7 +3,6 @@ import Gif from './components/gif';
 import GifList from './components/gifList';
 import SearchBar from './components/searchBar';
 import { Component } from 'react';
-import giphy from "giphy-api"
 
 const GIPHY_API_KEY = "MD9dBlZuTK7ERdjT7zv4nbtjw48g8sSL"
 
@@ -13,7 +12,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "aaQFx0LmPavAUl2LcZ/giphy.gif?cid=ecf05e470sdsap1g3c9llpi8h7x6gyaerdb3zffgqw2067"
+      selectedGifId: "RGyUJwAFjP38P3uEiV"
     };
 
     this.search = this.search.bind(this);
@@ -27,7 +26,6 @@ class App extends Component {
       this.setState({
         gifs: gifs
       })
-      console.log(gifs)
     })
   }
 
@@ -47,9 +45,8 @@ class App extends Component {
           </div>
         </div>
         <div className='right-scene'>
-          <GifList gifs={this.state.gifs} selectedGif={this.selectGif} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
-
       </div >
     );
   }
