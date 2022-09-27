@@ -4,8 +4,6 @@ import GifList from './components/gifList';
 import SearchBar from './components/searchBar';
 import { Component } from 'react';
 
-// const GIPHY_API_KEY = "MD9dBlZuTK7ERdjT7zv4nbtjw48g8sSL"
-
 class App extends Component {
   constructor(props) {
     super(props);
